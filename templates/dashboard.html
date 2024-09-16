@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h2>Bem-vindo, {{ session['loginUser'] }}</h2>
+    <h3>Seus Produtos</h3>
+    <ul id="productList">
+        {% for produto in produtos %}
+        <li>
+            {{ produto.nome }} - {{ produto.qtde }} unidades - R$ {{ produto.preco }}
+            <button class="deleteProduct" data-product-id="{{ produto.id }}">Excluir</button>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <a href="{{ url_for('cadastrar_produto') }}">Cadastrar Novo Produto</a><br>
+    <a href="{{ url_for('logout') }}">Logout</a>
+
+    <!-- Inclua o arquivo JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+    <!-- Inicialize funcionalidades JavaScript ao carregar a página -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Adiciona eventos para os botões de excluir produto
+            const deleteButtons = document.querySelectorAll('.deleteProduct');
+            deleteButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const productId = this.getAttribute('data-product-id');
+                    if (confirm('Tem certeza de que deseja excluir este produto?')) {
+                        window.location.href = `/excluir_produto/${productId}`;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+

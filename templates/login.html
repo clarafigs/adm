@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h2>Login</h2>
+    <form id="loginForm" method="POST" action="{{ url_for('login') }}" onsubmit="return validateLoginForm()">
+        <label for="loginUser">Login:</label>
+        <input type="text" id="loginUser" name="loginUser" required><br>
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required>
+        <button type="button" id="togglePassword" onclick="togglePasswordVisibility()">Mostrar Senha</button><br>
+
+        <button type="submit">Entrar</button>
+    </form>
+
+    <!-- Inclua o arquivo JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Usuário</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h2>Cadastrar Novo Usuário</h2>
+    <form id="userForm" method="POST" action="{{ url_for('cadastrar_usuario') }}" onsubmit="return validateUserForm()">
+        <label for="loginUser">Login:</label>
+        <input type="text" id="loginUser" name="loginUser" required><br>
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required>
+        <button type="button" id="togglePassword" onclick="togglePasswordVisibility()">Mostrar Senha</button><br>
+
+        <label for="tipoUser">Tipo de Usuário:</label>
+        <select id="tipoUser" name="tipoUser">
+            <option value="super">Super</option>
+            <option value="normal">Normal</option>
+        </select><br>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <!-- Inclua o arquivo JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
+
