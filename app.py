@@ -12,7 +12,7 @@ class Config:
 app = Flask(__name__)
 app.config.from_object(Config)
 
-# Inicializar o banco de dados
+
 db.init_app(app)
 
 with app.app_context():

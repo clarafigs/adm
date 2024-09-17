@@ -1,25 +1,25 @@
-// Função para validação de formulário de cadastro de usuário
+
 function validateUserForm() {
     const loginUser = document.getElementById('loginUser').value;
     const senha = document.getElementById('senha').value;
     const tipoUser = document.getElementById('tipoUser').value;
 
-    // Validação simples: checar se os campos estão preenchidos
+
     if (loginUser === '' || senha === '' || tipoUser === '') {
         alert('Por favor, preencha todos os campos.');
         return false;  // Impede o envio do formulário
     }
 
-    // Regras adicionais (como a força da senha) podem ser incluídas aqui
+
     if (senha.length < 6) {
         alert('A senha deve ter pelo menos 6 caracteres.');
         return false;
     }
 
-    return true;  // Permite o envio do formulário
+    return true;
 }
 
-// Função para validação de formulário de cadastro de produto
+
 function validateProductForm() {
     const nomeProduto = document.getElementById('nomeProduto').value;
     const quantidade = document.getElementById('quantidade').value;
@@ -43,12 +43,12 @@ function validateProductForm() {
     return true;
 }
 
-// Exibir uma mensagem de confirmação ao deletar um produto
+
 function confirmDelete() {
     return confirm('Tem certeza de que deseja excluir este produto?');
 }
 
-// Mostrar ou esconder senha no campo de login/cadastro
+
 function togglePasswordVisibility() {
     const senhaField = document.getElementById('senha');
     const toggleButton = document.getElementById('togglePassword');
@@ -62,7 +62,6 @@ function togglePasswordVisibility() {
     }
 }
 
-// Função para controlar o número de produtos que um usuário pode cadastrar
 function checkUserProductLimit(tipoUser) {
     const productCount = document.querySelectorAll('.product-item').length;
     const userType = tipoUser || document.getElementById('tipoUser').value;
@@ -75,12 +74,4 @@ function checkUserProductLimit(tipoUser) {
     return true;
 }
 
-// Exemplo de função para interagir com uma API (caso precise de chamadas AJAX)
-// function fetchProducts() {
-//     fetch('/api/products')
-//         .then(response => response.json())
-//         .then(data => {
-//             console.log('Lista de produtos:', data);
-//         })
-//         .catch(error => console.error('Erro ao buscar produtos:', error));
-// }
+

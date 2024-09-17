@@ -1,11 +1,11 @@
-# models.py
+
 from extensions import db
 
 class Usuario(db.Model):
     __tablename__ = 'usuarios'
     loginUser = db.Column(db.String(50), primary_key=True)
     senha = db.Column(db.String(200), nullable=False)
-    tipoUser = db.Column(db.String(10), nullable=False)  # 'super' ou 'normal'
+    tipoUser = db.Column(db.String(10), nullable=False)
 
 class Produto(db.Model):
     __tablename__ = 'produtos'

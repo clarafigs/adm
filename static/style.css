@@ -1,4 +1,4 @@
-/* Global Styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -26,14 +26,14 @@ a:hover {
     color: #2980b9;
 }
 
-/* Layout */
+
 .container {
     width: 80%;
     margin: 0 auto;
     max-width: 1200px;
 }
 
-/* Navbar */
+
 .navbar {
     background-color: #3498db;
     color: #fff;
@@ -52,7 +52,7 @@ a:hover {
     border-radius: 5px;
 }
 
-/* Buttons */
+
 .button {
     display: inline-block;
     padding: 10px 20px;
@@ -76,7 +76,7 @@ a:hover {
     background-color: #c0392b;
 }
 
-/* Form Styles */
+
 form {
     background-color: #fff;
     padding: 20px;
@@ -108,7 +108,7 @@ input[type="submit"]:hover {
     background-color: #2980b9;
 }
 
-/* Tables */
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -130,7 +130,7 @@ table tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-/* Cards (for product listing or user profiles) */
+
 .card {
     background-color: #fff;
     border: 1px solid #ddd;
@@ -154,7 +154,7 @@ table tr:nth-child(even) {
     text-align: right;
 }
 
-/* Footer */
+
 .footer {
     background-color: #3498db;
     color: white;
@@ -167,7 +167,7 @@ table tr:nth-child(even) {
     margin: 0;
 }
 
-/* Forms Specific to Login and Signup */
+
 .form-login, .form-signup {
     max-width: 400px;
     margin: 50px auto;
